@@ -1,13 +1,13 @@
 .row {
   display: flex;
-  gap: 15px;
-  margin-bottom: 15px;
+  /* gap: 15px;
+  margin-bottom: 15px; */
 }
 
-.col {
+/* .col {
   background-color: gray;
   height: 40px;
-}
+} */
 
 .col-12 {
   width: 100%;

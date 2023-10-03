@@ -14,6 +14,12 @@ body {
   }
   font-family: "Poppins", sans-serif;
   background-color: #1b004e;
+  button:active {
+    transform: scale(0.97);
+  }
+  button:hover {
+    cursor: pointer;
+  }
 }
 
 .container {
@@ -21,24 +27,25 @@ body {
   width: 1170px;
   margin: 0 auto;
 }
-
-.promo_bg {
-  width: 100%;
-  height: 400px;
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
   background-image: linear-gradient(
-    to right top,
-    #220076,
-    #330071,
-    #3f006c,
-    #470067,
-    #4e0062
+    to right,
+    #3e006c,
+    #42006a,
+    #460067,
+    #4a0065,
+    #4d0063
   );
-  background-repeat: repeat-x;
-
-  header {
-    margin: 0px auto;
+  z-index: 5;
+  .header_wrapper {
     padding-top: 30px;
     width: 1170px;
+    height: 90px;
+    margin: 0px auto;
     nav {
       display: flex;
       align-items: center;
@@ -58,6 +65,7 @@ body {
           padding: 0 9px 0 9px;
           a:hover {
             color: #f38080;
+            transition: all 0.3s ease-in-out;
           }
         }
       }
@@ -77,6 +85,21 @@ body {
     }
   }
 }
+
+.promo_bg {
+  width: 100%;
+  min-height: 500px;
+  margin-top: 90px;
+  background-image: linear-gradient(
+    to right top,
+    #220076,
+    #330071,
+    #3f006c,
+    #470067,
+    #4e0062
+  );
+  background-repeat: repeat-x;
+}
 .promo_bottom_img {
   margin: 0 auto;
   background: url(img/bg_slice.png);
@@ -89,20 +112,20 @@ body {
 section.promo {
   img.header_img {
     width: 650px;
-    top: 15px;
+    top: 53px;
     left: 670px;
     position: absolute;
   }
   h1.header_title {
     color: white;
     font-size: 60px;
-    padding-top: 68px;
+    padding-top: 104px;
   }
   p.header_subtitle {
     color: white;
     font-weight: 300;
     font-size: 16px;
-    margin-top: -25px;
+    margin-top: -36px;
   }
   button.white_listed {
     color: white;
@@ -114,6 +137,109 @@ section.promo {
     width: 190px;
     margin: 20px 0 0 0;
     letter-spacing: 1px;
+  }
+}
+
+section.crypto_prices {
+  h2.subtitle {
+    color: white;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin: 87px 0 62px;
+  }
+  table {
+    color: white;
+    width: 100%;
+    border-bottom: 1px solid #bdbdbd;
+    border-top: 1px solid #bdbdbd;
+    th {
+      padding-top: 5px;
+      height: 41px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    td {
+      padding: 20px 0 22px;
+      border-top: 1px solid #bdbdbd;
+      box-sizing: border-box;
+      font-size: 14px;
+      vertical-align: top;
+      span {
+        text-transform: uppercase;
+        color: #828282;
+        padding-left: 10px;
+        font-size: 11px;
+      }
+      img.star_img {
+        padding-right: 15px;
+        vertical-align: middle;
+      }
+      img.crypto_icon {
+        padding: 0 8px;
+        vertical-align: middle;
+      }
+      img.crypto_up,
+      .crypto_down {
+        padding-right: 5px;
+      }
+      img.line_img {
+        padding-right: 13px;
+      }
+    }
+    .number {
+      padding-left: 3ch;
+    }
+    .last7d {
+      padding-left: 8%;
+    }
+    .volume {
+      width: 190px;
+      padding-left: 75px;
+    }
+    .master {
+      width: 100px;
+    }
+    .d7 {
+      width: 128px;
+    }
+    .h24 {
+      width: 120px;
+    }
+    .name {
+      width: 195px;
+    }
+    .price {
+      width: 140px;
+      padding-left: 17px;
+    }
+    .star {
+      color: #828282;
+      font-size: 12px;
+    }
+    .red_color {
+      color: #ff1a1a;
+    }
+    .green_color {
+      color: #1aff7c;
+    }
+    .fz13 {
+      font-size: 13px;
+    }
+    .text_align_right {
+      text-align: right;
+    }
+    .padding_top {
+      padding-top: 20px;
+    }
+    .up_arrow {
+      padding-bottom: 5px;
+    }
+    img.info_icon {
+      vertical-align: middle;
+    }
   }
 }
 
