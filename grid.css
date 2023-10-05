@@ -1,7 +1,10 @@
 .row {
   display: flex;
-  gap: 30px;
+  gap: 15px;
 }
+/* .col {
+  border: 1px solid red;
+} */
 .col-12 {
   width: 100%;
 }
