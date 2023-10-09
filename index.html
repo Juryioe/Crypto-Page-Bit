@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="grid.css">
+    <title>Crypto Landing page</title>
+    <link rel="stylesheet" href="bootstrap-grid.min.css">
     <link rel="stylesheet" href="styles.min.css">
 </head>
 
@@ -24,7 +24,23 @@
                     <li><a href="#">Blog</a></li>
                 </ul>
             </nav>
-            <button><a href="#">Trade Now</a></button>
+            <div class="hamburger_menu">
+                <input id="menu_toggle" type="checkbox" />
+                <label class="menu_btn" for="menu_toggle">
+                    <span></span>
+                </label>
+
+                <ul class="menu_box">
+                    <li><a class="menu_item" href="#">Home</a></li>
+                    <li><a class="menu_item" href="#">Company</a></li>
+                    <li><a class="menu_item" href="#">About</a></li>
+                    <li><a class="menu_item" href="#">Pricing</a></li>
+                    <li><a class="menu_item" href="#">Team</a></li>
+                    <li><a class="menu_item" href="#">Contact</a></li>
+                    <li><a class="menu_item" href="#">Blog</a></li>
+                </ul>
+            </div>
+            <button class="trade"><a href="#">Trade Now</a></button>
         </div>
     </header>
     <main>
@@ -32,14 +48,15 @@
             <section class="promo">
                 <div class="container">
                     <div class="row">
-                        <div class="col col-7">
-                            <h1 class="header_title">Make better businees <br>with Cryptocurrency</h1>
+                        <div class="col-md-7">
+                            <h1 class="header_title">Make better businees with <span>Cryptocurrency</span></h1>
                             <p class="header_subtitle">We offers users a fully operational long-term rental
-                                platform<br>It
-                                plans to leverages blockchain technology.</p>
-                            <button class="white_listed"><a href="#">Get Whitelisted</a></button>
+                                platform <span>It
+                                    plans to leverages blockchain technology.</span></p>
+                            <div class="promo_btn"><button class="white_listed"><a href="#">Get Whitelisted</a></button>
+                            </div>
                         </div>
-                        <div class="col col-5">
+                        <div class="col-5">
                             <div class="header_img_wrap">
                                 <img class="header_img" src="img/image_1.png" alt="image">
                             </div>
@@ -178,23 +195,32 @@
             <div class="container">
                 <h2 class="subtitle black">The most trusted cryptocurrency platform</h2>
                 <div class="row">
-                    <div class="col col-4"><img src="img/platform_icon_1.svg" alt="img1" class="platform_1">
-                        <h3>Ease of Trading</h3>
-                        <p>Intuitive interface</p>
-                        <p>Instant deposit options</p>
-                        <p>Cash out directly to your bank account</p>
+                    <div class="col-sm-4">
+                        <div class="platform_block">
+                            <img src="img/platform_icon_1.svg" alt="img1" class="platform_1">
+                            <h3>Ease of Trading</h3>
+                            <p>Intuitive interface</p>
+                            <p>Instant deposit options</p>
+                            <p>Cash out directly to your bank account</p>
+                        </div>
                     </div>
-                    <div class="col col-5"><img src="img/platform_icon_2.svg" alt="img2" class="platform_2">
-                        <h3>Institutional-grade Security</h3>
-                        <p>98% of assets stored safely offline</p>
-                        <p>Highly encrypted personal data</p>
-                        <p>Whitelisting and transaction confirmations</p>
+                    <div class="col-sm-5">
+                        <div class="platform_block">
+                            <img src="img/platform_icon_2.svg" alt="img2" class="platform_2">
+                            <h3>Institutional-grade Security</h3>
+                            <p>98% of assets stored safely offline</p>
+                            <p>Highly encrypted personal data</p>
+                            <p>Whitelisting and transaction confirmations</p>
+                        </div>
                     </div>
-                    <div class="col col-3"><img src="img/platform_icon_3.svg" alt="img3" class="platform_3">
-                        <h3>Proven Reliability</h3>
-                        <p>Exchanging bitcoin since 2011</p>
-                        <p>Industry-leading uptime</p>
-                        <p>24/7 dedicated support</p>
+                    <div class="col-sm-3">
+                        <div class="platform_block">
+                            <img src="img/platform_icon_3.svg" alt="img3" class="platform_3">
+                            <h3>Proven Reliability</h3>
+                            <p>Exchanging bitcoin since 2011</p>
+                            <p>Industry-leading uptime</p>
+                            <p>24/7 dedicated support</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -202,7 +228,7 @@
         <section class="store">
             <div class="container">
                 <div class="row">
-                    <div class="col col-6">
+                    <div class="col-md-6">
                         <h2 class="subtitle">Try the future, today.<br>
                             Download Crypto</h2>
                         <p>Stay connected to the market with our mobile app. Featuring advanced order types and
@@ -213,8 +239,12 @@
                                 <img src="img/store_img_2.svg" alt="img_2">
                             </a></div>
                     </div>
-                    <div class="col col-6">
+                    <div class="col-md-6">
                         <div class="store_img_ph"><img src="img/store_img_3.png" alt="img_3"></div>
+                        <div class="store_images_mob"><a href="#"><img src="img/store_img_1.svg" alt="img_1"></a><a
+                                href="#">
+                                <img src="img/store_img_2.svg" alt="img_2">
+                            </a></div>
                     </div>
                 </div>
             </div>
@@ -223,7 +253,7 @@
             <div class="container">
                 <h2 class="subtitle black">Learn to thrive</h2>
                 <div class="row">
-                    <div class="col col-4">
+                    <div class="col-md-4">
                         <div class="item_wrap">
                             <div class="item_img">
                                 <img src="img/thrive_img_1.png" alt="img">
@@ -246,7 +276,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col col-4">
+                    <div class="col-md-4">
                         <div class="item_wrap">
                             <div class="item_img">
                                 <img src="img/thrive_img_2.png" alt="img">
@@ -269,7 +299,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col col-4">
+                    <div class="col-md-4">
                         <div class="item_wrap">
                             <div class="item_img">
                                 <img src="img/thrive_img_3.png" alt="img">
