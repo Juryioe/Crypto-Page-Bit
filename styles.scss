@@ -1,3 +1,17 @@
+$dark_section_color: #1b004e;
+$white_section_color: #ffffff;
+$section_title_fz: 2rem;
+$section_title_fz_mob: 1.25rem;
+
+@mixin section_dark {
+  padding: 60px 0 90px;
+  background-color: $dark_section_color;
+}
+@mixin section_white {
+  padding: 60px 0 80px;
+  background-color: $white_section_color;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap");
 
@@ -8,12 +22,8 @@
 body {
   margin: 0;
   padding: 0;
-  a {
-    color: white;
-    text-decoration: none;
-  }
   font-family: "Poppins", sans-serif;
-  background-color: #1b004e;
+  background-color: #480065;
   button:active {
     transform: scale(0.97);
   }
@@ -22,14 +32,26 @@ body {
   }
   h2.subtitle {
     color: white;
-    font-size: 32px;
+    font-size: $section_title_fz;
     font-weight: 600;
-    text-align: center;
     margin-bottom: 55px;
   }
   h2.black {
     color: black;
   }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+.text_align_left {
+  text-align: left;
+}
+.text_align_right {
+  text-align: right;
+}
+.text_align_center {
+  text-align: center;
 }
 
 .container {
@@ -98,7 +120,6 @@ header {
     }
   }
 }
-
 .promo_bg {
   width: 100%;
   min-height: 520px;
@@ -121,7 +142,6 @@ header {
   height: 86px;
   width: 100%;
 }
-
 section.promo {
   .header_img_wrap {
     position: relative;
@@ -160,8 +180,7 @@ section.promo {
 }
 
 section.crypto_prices {
-  padding-top: 60px;
-  padding-bottom: 100px;
+  @include section_dark;
   table {
     color: white;
     width: 100%;
@@ -242,9 +261,6 @@ section.crypto_prices {
     .fz13 {
       font-size: 13px;
     }
-    .text_align_right {
-      text-align: right;
-    }
     .padding_top {
       padding-top: 20px;
     }
@@ -258,9 +274,7 @@ section.crypto_prices {
 }
 
 section.platform {
-  background-color: #fff6fb;
-  padding-top: 68px;
-  min-height: 600px;
+  @include section_white;
   h3 {
     color: black;
     font-size: 24px;
@@ -274,13 +288,13 @@ section.platform {
 }
 
 section.store {
-  min-height: 700px;
+  @include section_dark;
+  padding: 120px 0 120px;
+  .row {
+    align-items: center;
+  }
   .store_images_mob {
     display: none;
-  }
-  h2.subtitle {
-    text-align: left;
-    margin: 193px 0 0;
   }
   p {
     font-size: 17px;
@@ -293,20 +307,14 @@ section.store {
     gap: 25px;
   }
   .store_img_ph {
-    position: relative;
-    margin-top: 50px;
     img {
-      position: absolute;
       width: 82%;
-      top: 52px;
-      left: 20%;
     }
   }
 }
 
 section.thrive {
-  padding: 70px 0 110px;
-  background-color: #fff6fb;
+  @include section_white;
   .item_wrap {
     margin: -12px auto;
     width: 95%;
@@ -353,6 +361,7 @@ section.thrive {
 }
 
 section.subscribe {
+  @include section_dark;
   position: relative;
   padding: 77px 0 50px;
   img {
@@ -365,7 +374,7 @@ section.subscribe {
   h3.subscribe {
     text-align: center;
     color: white;
-    font-size: 50px;
+    font-size: 3rem;
     line-height: 0;
   }
   h3.subscribe {
@@ -450,294 +459,11 @@ footer {
       a {
         line-height: 0;
       }
-    }
-  }
-}
-
-@media screen and (max-width: 1224px) {
-  .container {
-    padding: 0 25px;
-  }
-  li {
-    letter-spacing: 0;
-  }
-  section.promo {
-    h1.header_title {
-      font-size: 48px;
-      line-height: 3.5rem;
-    }
-    p.header_subtitle {
-      margin-top: -11px;
-    }
-  }
-}
-
-@media screen and (max-width: 425px) {
-  header {
-    background: #1b004e;
-  }
-  nav {
-    display: none;
-  }
-  section.promo {
-    h1.header_title {
-      text-align: center;
-      font-size: 26px;
-      line-height: 2.8rem;
-      span {
-        display: block;
-      }
-    }
-    p.header_subtitle {
-      margin-top: 0;
-      font-size: 16px;
-      text-align: center;
-      line-height: 30px;
-      span {
-        display: inline;
-      }
-    }
-  }
-  header {
-    .header_container {
-      padding-top: 55px;
-      align-items: center;
-      .logo {
-        .logo_img {
-          transform: translateY(4px);
-        }
-      }
-      .hamburger_menu {
-        display: block;
-      }
-      #menu_toggle {
-        opacity: 0;
-        &:checked {
-          & ~ .menu_btn {
-            & > span {
-              transform: rotate(45deg);
-              &::before {
-                top: 0;
-                transform: rotate(0);
-              }
-              &::after {
-                top: 0;
-                transform: rotate(90deg);
-              }
-            }
-          }
-          & ~ .menu_box {
-            visibility: visible;
-            left: 0;
-          }
-        }
-      }
-      .menu_btn {
-        display: flex;
-        align-items: center;
-        position: fixed;
-        top: 67px;
-        right: 20px;
-        width: 26px;
-        height: 26px;
-        cursor: pointer;
-        z-index: 1;
-        & > span {
-          &::before {
-            content: "";
-            top: -8px;
-          }
-          &::after {
-            content: "";
-            top: 8px;
-          }
-        }
-      }
-      .menu_btn > span,
-      .menu_btn > span::before,
-      .menu_btn > span::after {
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        border-radius: 4px;
-        background-color: #ffffff;
-        transition-duration: 0.25s;
-      }
-      .menu_box {
-        display: block;
-        position: fixed;
-        visibility: hidden;
-        top: 0;
-        left: -100%;
-        width: 200px;
-        height: 100%;
-        margin: 0;
-        padding: 80px 0;
-        list-style: none;
-        background-color: #1b004e;
-        box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-        transition-duration: 0.25s;
-      }
-      .menu_item {
-        display: block;
-        padding: 12px 24px;
-        color: #ffffff;
-        font-family: "Roboto", sans-serif;
-        font-size: 20px;
-        font-weight: 600;
-        text-decoration: none;
-        transition-duration: 0.25s;
-        &:hover {
-          background-color: #eb5857;
-        }
-      }
-    }
-  }
-  .header_img_wrap {
-    display: none;
-  }
-  .promo_bg {
-    background-image: none;
-    min-height: 0;
-    .promo_btn {
-      display: flex;
-      justify-content: center;
-    }
-  }
-
-  .promo_bottom_img {
-    display: none;
-  }
-  .trade {
-    display: none;
-  }
-
-  section.crypto_prices {
-    padding-top: 30px;
-    h2.subtitle {
-      font-size: 20px;
-    }
-    table {
-      border-top: none;
-      tr th {
-        display: none;
-      }
-      tr td {
-        display: none;
-      }
-      tr th:nth-child(2) {
-        display: block;
-      }
-      tr th:nth-child(7) {
-        display: table-cell;
-      }
-      tr td:nth-child(2) {
-        display: block;
-      }
-      tr td:nth-child(7) {
-        display: table-cell;
-      }
-    }
-  }
-  section.platform {
-    padding: 30px 0 30px;
-    .container {
-      display: flex;
-      flex-direction: column;
-    }
-    .platform_block {
-      text-align: center;
-      margin-top: 25px;
-    }
-    h2.black {
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
-  }
-  section.store {
-    min-height: 0;
-    padding-bottom: 50px;
-    h2.subtitle {
-      font-size: 20px;
-      text-align: center;
-      margin: 25px 0;
-    }
-    p {
-      font-size: 14px;
-      text-align: center;
-      width: 100%;
-    }
-    .store_images {
-      display: none;
-    }
-    .store_img_ph {
-      position: relative;
-      margin-top: 0;
-      text-align: center;
-      img {
-        position: relative;
-        width: 80%;
-        top: 20px;
-        left: 0;
-      }
-    }
-    .store_images_mob {
-      display: flex;
-      justify-content: center;
-      gap: 0;
-      margin-top: 50px;
-      a {
-        display: flex;
-        justify-content: center;
-      }
-      img {
-        width: 80%;
-      }
-    }
-  }
-  section.thrive {
-    h2.black {
-      font-size: 32px;
-      margin: 0;
-    }
-    .item_wrap {
-      margin-top: 50px;
-    }
-  }
-  section.subscribe {
-    padding: 40px 0 10px;
-    img {
-      display: none;
-    }
-    h2.subscribe {
-      font-size: 24px;
-    }
-    h3.subscribe {
-      padding-top: 20px;
-      font-size: 14px;
-    }
-    .btn_wrap {
-      width: 90%;
-      a {
-        padding: 13px 30px 13px 30px;
-      }
-    }
-  }
-  footer {
-    padding-bottom: 50px;
-    .links_wrap {
-      flex-direction: column;
-      div {
-        margin-top: 30px;
-      }
-    }
-    .footer_bottom {
-      text-align: center;
-      flex-direction: column-reverse;
-      .social {
-        justify-content: center;
+      a:hover {
+        fill: #fff;
       }
     }
   }
 }
+
+@import "media";
